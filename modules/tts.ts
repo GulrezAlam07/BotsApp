@@ -35,7 +35,7 @@ export = {
             await client.sendMessage(BotsApp.chatId, tts.NO_INPUT, MessageType.text);
             return await client.deleteMessage(BotsApp.chatId, { id: proccessing.key.id, remoteJid: BotsApp.chatId, fromMe: true });
         }
-        if (text.length > 200) {
+        if (text.length > 20000) {
             await client.sendMessage(BotsApp.chatId, format(tts.TOO_LONG, text.length.toString()), MessageType.text);
         } else {
             try {
